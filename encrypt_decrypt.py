@@ -46,7 +46,7 @@ def Read_Encrypted_Msg(key_input,file_input):
 
     # Decrypt the message and display to the terminal
     encrypted_msg = key.decrypt(content).decode()
-    print(str(encrypted_msg))
+    print("The message is: " + str(encrypted_msg))
 
 def main():
     print("Warning: This script will overwrite the file of choice!")
