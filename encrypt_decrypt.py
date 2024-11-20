@@ -1,17 +1,10 @@
-'''
-Text encryption/decryption
-- create a command line interface where you can supply a message and a key value to encrypt the message using the Python cryptography module. 
-- message will be written to a file of the user's choice. 
-- script must be able to read text from a specified file and be able to decrypt a message using a supplied key value.
-'''
-
+# Import all needed modules
 import os
 from hashlib import sha256
 from base64 import urlsafe_b64encode
 from cryptography.fernet import Fernet
 
 # make a function here called Add_Encrypted_Msg
-# Note: the file must be already exist to begin with.
 def Add_Encrypted_Msg(msg_input=str,key_input=str,file_input=str):
     
     # file_input format: "C:\\users\\<username>\\file.txt" or "C:/users/<username>/file.txt"   
@@ -63,11 +56,13 @@ def main():
         msg_input = input("The message needed to be encrypted: ")
         key_input = input("The key value for message encryption: ")
         file_input = input("File path you would like to write encrypted message to: ")
+        
         Add_Encrypted_Msg(msg_input,key_input,file_input)
         exit()
     if user_choice == "2":
         key_input = input("The key you have used to encrypt the msg: ")
         file_input = input("File path you would like to read encrypted message from: ")
+        
         Read_Encrypted_Msg(key_input,file_input)
         exit()
     else:
