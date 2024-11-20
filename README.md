@@ -1,2 +1,8 @@
 # encrypt_decrypt-python
-For Python Networking
+This script is for text encryption/decryption
+You will need to provide message to encrypt, key for message encryption and file path to write encrypted message to, where the file must be already existed to begin with
+If you would like to read encrypted message from the file, will need to provide the correct key value and the file path.
+
+Note: 
+  - The file path will be formated as: C:\\users\\<username>\\Downloads\\file.txt or C:/users/<username>/Downloads/file.txt
+  - This script will overide the content of the chosen file.
