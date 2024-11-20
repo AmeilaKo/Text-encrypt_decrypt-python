@@ -11,6 +11,7 @@ from base64 import urlsafe_b64encode
 from cryptography.fernet import Fernet
 
 # make a function here called Add_Encrypted_Msg
+# Note: the file must be already exist to begin with.
 def Add_Encrypted_Msg(msg_input=str,key_input=str,file_input=str):
     
     # file_input format: "C:\\users\\<username>\\file.txt" or "C:/users/<username>/file.txt"   
