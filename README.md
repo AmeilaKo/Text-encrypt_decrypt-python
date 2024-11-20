@@ -1,6 +1,6 @@
 # encrypt_decrypt-python
-This script is for text encryption/decryption
-You will need to provide message to encrypt, key for message encryption and file path to write encrypted message to, where the file must be already existed to begin with
+This script is for text encryption/decryption.</br>
+You will need to provide message to encrypt, key for message encryption and file path to write encrypted message to, where the file must be already existed to begin with. </br>
 If you would like to read encrypted message from the file, will need to provide the correct key value and the file path.
 
 Note: 
