@@ -7,8 +7,7 @@ from cryptography.fernet import Fernet
 # make a function here called Add_Encrypted_Msg
 def Add_Encrypted_Msg(msg_input=str,key_input=str,file_input=str):
     
-    # file_input format: "C:\\users\\<username>\\file.txt" or "C:/users/<username>/file.txt"   
-    # check file path exist, open file for appending
+    # check file path exist, open file for writing
     if os.path.exists(file_input):
         content = open(file_input, 'w')
     else:
@@ -32,11 +31,11 @@ def Add_Encrypted_Msg(msg_input=str,key_input=str,file_input=str):
 # make a function here called Read_Encrypted_Msg
 def Read_Encrypted_Msg(key_input,file_input):
 
-    # check file path exist, open file for appending
+    # check file path exist, open file for reading
     if os.path.exists(file_input):
         content = open(file_input, 'r')
         content = content.read()
-        content = content[2:-1]
+        content = content[2:-1] # get rid of encoded part (b'')
     else:
         print("File is not found!")
 
